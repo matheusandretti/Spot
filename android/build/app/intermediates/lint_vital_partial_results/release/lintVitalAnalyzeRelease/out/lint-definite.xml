@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.1" type="incidents">
+
+    <incident
+        id="Instantiatable"
+        severity="fatal"
+        message="`MainActivity` must extend android.app.Activity">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*manifest*0}"
+            line="6"
+            column="27"
+            startOffset="209"
+            endLine="6"
+            endColumn="40"
+            endOffset="222"/>
+    </incident>
+
+</incidents>

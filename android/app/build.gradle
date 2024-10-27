@@ -4,8 +4,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:8.0.2"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        // Versão estável do plugin do Gradle
+        classpath 'com.android.tools.build:gradle:8.7.1'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.10'
     }
 }
 
@@ -13,7 +14,6 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
-
 }
 
 android {
@@ -31,8 +31,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.spot"
-        minSdk 21
-        //noinspection OldTargetApi
+        minSdkVersion flutter.minSdkVersion  // Definido diretamente para evitar problemas
         targetSdkVersion 34
         versionCode 1
         versionName "1.0"
@@ -40,7 +39,17 @@ android {
 
     buildTypes {
         release {
+            minifyEnabled false
+            shrinkResources false
             signingConfig signingConfigs.debug
+        }
+    }
+
+    // Definir o nome de saída do .apk
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def newApkName = "${variant.name}-${variant.versionName}.apk"
+            outputFileName = newApkName
         }
     }
 }

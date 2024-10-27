@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.spot.app-mergeDebugResources-24:/values-night-v8/values-night-v8.xml",
+            "map": [
+                {
+                    "source": "D:\\AndroidStudioProjects\\Spot\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "from": {
+                        "startLines": "3,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "140,407",
+                        "endLines": "5,10",
+                        "endColumns": "12,12",
+                        "endOffsets": "313,584"
+                    },
+                    "to": {
+                        "startLines": "2,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,231",
+                        "endLines": "4,7",
+                        "endColumns": "12,12",
+                        "endOffsets": "226,406"
+                    }
+                }
+            ]
+        }
+    ]
+}
